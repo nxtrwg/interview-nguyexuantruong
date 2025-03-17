@@ -1,13 +1,16 @@
+import bcrypt from "bcryptjs";
+
 const users = [
     {
         name: "Romain Gillig",
         type: "Particulier",
-        email: "romain@gillig.studio",
+        email: "interview@gmail.com",
         phone: "06 88 65 26 87",
         opportunity: "Formation 3D",
         responsable: "Sébastien",
         image: "/images/avatar.avif",
-        tags: "BTP, BtoB, +1"
+        tags: "BTP, BtoB, +1",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Alice Dupont",
@@ -17,7 +20,8 @@ const users = [
         opportunity: "Formation Marketing",
         responsable: "Claire",
         image: "/images/avatar.avif",
-        tags: "Marketing, Freelance, +2"
+        tags: "Marketing, Freelance, +2",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Jean Martin",
@@ -27,7 +31,8 @@ const users = [
         opportunity: "Formation Web Development",
         responsable: "Marc",
         image: "/images/avatar.avif",
-        tags: "Tech, Web, +3"
+        tags: "Tech, Web, +3",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Sophie Laurent",
@@ -37,7 +42,8 @@ const users = [
         opportunity: "Formation Design Graphique",
         responsable: "Elodie",
         image: "/images/avatar.avif",
-        tags: "Design, UI/UX, +1"
+        tags: "Design, UI/UX, +1",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Marc Dubois",
@@ -47,7 +53,8 @@ const users = [
         opportunity: "Formation Business Management",
         responsable: "Antoine",
         image: "/images/avatar.avif",
-        tags: "Business, Management, +5"
+        tags: "Business, Management, +5",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Claire Fontaine",
@@ -57,7 +64,8 @@ const users = [
         opportunity: "Formation RH",
         responsable: "Julie",
         image: "/images/avatar.avif",
-        tags: "RH, Recrutement, +2"
+        tags: "RH, Recrutement, +2",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Paul Lefevre",
@@ -67,7 +75,8 @@ const users = [
         opportunity: "Formation Comptabilité",
         responsable: "Thomas",
         image: "/images/avatar.avif",
-        tags: "Finance, Comptabilité, +1"
+        tags: "Finance, Comptabilité, +1",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Elodie Morel",
@@ -77,7 +86,8 @@ const users = [
         opportunity: "Formation Communication",
         responsable: "Nathalie",
         image: "/images/avatar.avif",
-        tags: "Communication, Média, +3"
+        tags: "Communication, Média, +3",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Antoine Bernard",
@@ -87,7 +97,8 @@ const users = [
         opportunity: "Formation Développement Mobile",
         responsable: "Damien",
         image: "/images/avatar.avif",
-        tags: "Mobile, iOS, Android, +2"
+        tags: "Mobile, iOS, Android, +2",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Julie Lambert",
@@ -97,7 +108,8 @@ const users = [
         opportunity: "Formation Photographie",
         responsable: "Camille",
         image: "/images/avatar.avif",
-        tags: "Photographie, Créatif, +1"
+        tags: "Photographie, Créatif, +1",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Romain Gillig",
@@ -107,7 +119,8 @@ const users = [
         opportunity: "Formation 3D",
         responsable: "Sébastien",
         image: "/images/avatar.avif",
-        tags: "BTP, BtoB, +1"
+        tags: "BTP, BtoB, +1",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Alice Dupont",
@@ -117,7 +130,8 @@ const users = [
         opportunity: "Formation Marketing",
         responsable: "Claire",
         image: "/images/avatar.avif",
-        tags: "Marketing, Freelance, +2"
+        tags: "Marketing, Freelance, +2",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Jean Martin",
@@ -127,7 +141,8 @@ const users = [
         opportunity: "Formation Web Development",
         responsable: "Marc",
         image: "/images/avatar.avif",
-        tags: "Tech, Web, +3"
+        tags: "Tech, Web, +3",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Sophie Laurent",
@@ -137,7 +152,8 @@ const users = [
         opportunity: "Formation Design Graphique",
         responsable: "Elodie",
         image: "/images/avatar.avif",
-        tags: "Design, UI/UX, +1"
+        tags: "Design, UI/UX, +1",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Marc Dubois",
@@ -147,7 +163,8 @@ const users = [
         opportunity: "Formation Business Management",
         responsable: "Antoine",
         image: "/images/avatar.avif",
-        tags: "Business, Management, +5"
+        tags: "Business, Management, +5",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Romain Gillig",
@@ -157,7 +174,8 @@ const users = [
         opportunity: "Formation 3D",
         responsable: "Sébastien",
         image: "/images/avatar.avif",
-        tags: "BTP, BtoB, +1"
+        tags: "BTP, BtoB, +1",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Alice Dupont",
@@ -167,7 +185,8 @@ const users = [
         opportunity: "Formation Marketing",
         responsable: "Claire",
         image: "/images/avatar.avif",
-        tags: "Marketing, Freelance, +2"
+        tags: "Marketing, Freelance, +2",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Jean Martin",
@@ -177,7 +196,8 @@ const users = [
         opportunity: "Formation Web Development",
         responsable: "Marc",
         image: "/images/avatar.avif",
-        tags: "Tech, Web, +3"
+        tags: "Tech, Web, +3",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Sophie Laurent",
@@ -187,7 +207,8 @@ const users = [
         opportunity: "Formation Design Graphique",
         responsable: "Elodie",
         image: "/images/avatar.avif",
-        tags: "Design, UI/UX, +1"
+        tags: "Design, UI/UX, +1",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Marc Dubois",
@@ -197,7 +218,8 @@ const users = [
         opportunity: "Formation Business Management",
         responsable: "Antoine",
         image: "/images/avatar.avif",
-        tags: "Business, Management, +5"
+        tags: "Business, Management, +5",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Claire Fontaine",
@@ -207,7 +229,8 @@ const users = [
         opportunity: "Formation RH",
         responsable: "Julie",
         image: "/images/avatar.avif",
-        tags: "RH, Recrutement, +2"
+        tags: "RH, Recrutement, +2",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Paul Lefevre",
@@ -217,7 +240,8 @@ const users = [
         opportunity: "Formation Comptabilité",
         responsable: "Thomas",
         image: "/images/avatar.avif",
-        tags: "Finance, Comptabilité, +1"
+        tags: "Finance, Comptabilité, +1",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Elodie Morel",
@@ -227,7 +251,8 @@ const users = [
         opportunity: "Formation Communication",
         responsable: "Nathalie",
         image: "/images/avatar.avif",
-        tags: "Communication, Média, +3"
+        tags: "Communication, Média, +3",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Antoine Bernard",
@@ -237,7 +262,8 @@ const users = [
         opportunity: "Formation Développement Mobile",
         responsable: "Damien",
         image: "/images/avatar.avif",
-        tags: "Mobile, iOS, Android, +2"
+        tags: "Mobile, iOS, Android, +2",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Julie Lambert",
@@ -247,7 +273,8 @@ const users = [
         opportunity: "Formation Photographie",
         responsable: "Camille",
         image: "/images/avatar.avif",
-        tags: "Photographie, Créatif, +1"
+        tags: "Photographie, Créatif, +1",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Romain Gillig",
@@ -257,7 +284,8 @@ const users = [
         opportunity: "Formation 3D",
         responsable: "Sébastien",
         image: "/images/avatar.avif",
-        tags: "BTP, BtoB, +1"
+        tags: "BTP, BtoB, +1",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Alice Dupont",
@@ -267,7 +295,8 @@ const users = [
         opportunity: "Formation Marketing",
         responsable: "Claire",
         image: "/images/avatar.avif",
-        tags: "Marketing, Freelance, +2"
+        tags: "Marketing, Freelance, +2",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Jean Martin",
@@ -277,7 +306,8 @@ const users = [
         opportunity: "Formation Web Development",
         responsable: "Marc",
         image: "/images/avatar.avif",
-        tags: "Tech, Web, +3"
+        tags: "Tech, Web, +3",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Sophie Laurent",
@@ -287,7 +317,8 @@ const users = [
         opportunity: "Formation Design Graphique",
         responsable: "Elodie",
         image: "/images/avatar.avif",
-        tags: "Design, UI/UX, +1"
+        tags: "Design, UI/UX, +1",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Marc Dubois",
@@ -297,7 +328,8 @@ const users = [
         opportunity: "Formation Business Management",
         responsable: "Antoine",
         image: "/images/avatar.avif",
-        tags: "Business, Management, +5"
+        tags: "Business, Management, +5",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Romain Gillig",
@@ -307,7 +339,8 @@ const users = [
         opportunity: "Formation 3D",
         responsable: "Sébastien",
         image: "/images/avatar.avif",
-        tags: "BTP, BtoB, +1"
+        tags: "BTP, BtoB, +1",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Alice Dupont",
@@ -317,7 +350,8 @@ const users = [
         opportunity: "Formation Marketing",
         responsable: "Claire",
         image: "/images/avatar.avif",
-        tags: "Marketing, Freelance, +2"
+        tags: "Marketing, Freelance, +2",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Jean Martin",
@@ -327,7 +361,8 @@ const users = [
         opportunity: "Formation Web Development",
         responsable: "Marc",
         image: "/images/avatar.avif",
-        tags: "Tech, Web, +3"
+        tags: "Tech, Web, +3",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Sophie Laurent",
@@ -337,7 +372,8 @@ const users = [
         opportunity: "Formation Design Graphique",
         responsable: "Elodie",
         image: "/images/avatar.avif",
-        tags: "Design, UI/UX, +1"
+        tags: "Design, UI/UX, +1",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Marc Dubois",
@@ -347,7 +383,8 @@ const users = [
         opportunity: "Formation Business Management",
         responsable: "Antoine",
         image: "/images/avatar.avif",
-        tags: "Business, Management, +5"
+        tags: "Business, Management, +5",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Claire Fontaine",
@@ -357,7 +394,8 @@ const users = [
         opportunity: "Formation RH",
         responsable: "Julie",
         image: "/images/avatar.avif",
-        tags: "RH, Recrutement, +2"
+        tags: "RH, Recrutement, +2",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Paul Lefevre",
@@ -367,7 +405,8 @@ const users = [
         opportunity: "Formation Comptabilité",
         responsable: "Thomas",
         image: "/images/avatar.avif",
-        tags: "Finance, Comptabilité, +1"
+        tags: "Finance, Comptabilité, +1",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Elodie Morel",
@@ -377,7 +416,8 @@ const users = [
         opportunity: "Formation Communication",
         responsable: "Nathalie",
         image: "/images/avatar.avif",
-        tags: "Communication, Média, +3"
+        tags: "Communication, Média, +3",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Antoine Bernard",
@@ -387,7 +427,8 @@ const users = [
         opportunity: "Formation Développement Mobile",
         responsable: "Damien",
         image: "/images/avatar.avif",
-        tags: "Mobile, iOS, Android, +2"
+        tags: "Mobile, iOS, Android, +2",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Julie Lambert",
@@ -397,7 +438,8 @@ const users = [
         opportunity: "Formation Photographie",
         responsable: "Camille",
         image: "/images/avatar.avif",
-        tags: "Photographie, Créatif, +1"
+        tags: "Photographie, Créatif, +1",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Romain Gillig",
@@ -407,7 +449,8 @@ const users = [
         opportunity: "Formation 3D",
         responsable: "Sébastien",
         image: "/images/avatar.avif",
-        tags: "BTP, BtoB, +1"
+        tags: "BTP, BtoB, +1",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Alice Dupont",
@@ -417,7 +460,8 @@ const users = [
         opportunity: "Formation Marketing",
         responsable: "Claire",
         image: "/images/avatar.avif",
-        tags: "Marketing, Freelance, +2"
+        tags: "Marketing, Freelance, +2",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Jean Martin",
@@ -427,7 +471,8 @@ const users = [
         opportunity: "Formation Web Development",
         responsable: "Marc",
         image: "/images/avatar.avif",
-        tags: "Tech, Web, +3"
+        tags: "Tech, Web, +3",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Sophie Laurent",
@@ -437,7 +482,8 @@ const users = [
         opportunity: "Formation Design Graphique",
         responsable: "Elodie",
         image: "/images/avatar.avif",
-        tags: "Design, UI/UX, +1"
+        tags: "Design, UI/UX, +1",
+        password: bcrypt.hashSync("123456", 10),
     },
     {
         name: "Marc Dubois",
@@ -447,7 +493,8 @@ const users = [
         opportunity: "Formation Business Management",
         responsable: "Antoine",
         image: "/images/avatar.avif",
-        tags: "Business, Management, +5"
+        tags: "Business, Management, +5",
+        password: bcrypt.hashSync("123456", 10),
     },
 ];
 

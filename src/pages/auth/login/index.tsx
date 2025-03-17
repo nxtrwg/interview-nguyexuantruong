@@ -1,12 +1,34 @@
+import { useState } from "react";
 import { useNavigate } from "react-router"
+import { users } from "../../../datas/user";
+import bcrypt from "bcryptjs";
+import { login } from "../auth";
+import { useAlert } from "../../../components/alert/AlertProvider";
+import AlertDangerous from "../../../components/alert/alert-dangerous";
 
 export default function Login() {
 
+    const [email, setEmail] = useState("");
+    const [password, setPassword] = useState("");
+    const [notice, setNotice] = useState("");
+
     const navigate = useNavigate()
+
+    const {openAlert, closeAlert} = useAlert()
 
     const handleSubmit = (e: React.MouseEvent<HTMLElement>) => {
         e.preventDefault()
-        navigate("/")
+
+        const result = login(email, password)
+        if (result.success) {
+            setNotice("")
+            navigate("/")
+        } else {
+            openAlert(<AlertDangerous message={result.message} />)
+            setTimeout(() => {
+                closeAlert()
+            }, 1000);
+        }
     }
 
     return (
@@ -31,8 +53,9 @@ export default function Login() {
                 </div>
 
                 <div className="mt-[3.75rem]">
-                    <input type="text" name="email" id="email" placeholder="Email Address" className="h-[3.25rem] w-full bg-white py-[0.9375] px-4 rounded-[0.1875rem] placeholder:font-semibold text-[#161629]" />
-                    <input type="password" name="password" id="password" placeholder="Password Address" className="h-[3.25rem] w-full bg-white py-[0.9375] px-4 rounded-[0.1875rem] mt-3" />
+                    <p className="text-accent-red font-bold text-sm">{notice}</p>
+                    <input type="text" name="email" id="email" placeholder="Email Address" className="h-[3.25rem] w-full bg-white py-[0.9375] px-4 rounded-[0.1875rem] placeholder:font-semibold text-[#161629]" value={email} onChange={(e) => setEmail(e.target.value)} />
+                    <input type="password" name="password" id="password" placeholder="Password Address" className="h-[3.25rem] w-full bg-white py-[0.9375] px-4 rounded-[0.1875rem] mt-3" value={password} onChange={(e) => setPassword(e.target.value)} />
                     <a href="#" className="text-[#16FCD2] mt-2 text-right block text-base">Mot de passe oublié?</a>
                 </div>
 

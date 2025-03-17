@@ -1,8 +1,14 @@
 import { useNavigate } from "react-router"
+import { logout } from "../../../../pages/auth/auth"
 
 export default function Sidebar() {
 
     const navigation = useNavigate()
+
+    const handleLogout = () => {
+        logout()
+        navigation("/login")
+    }
 
     return (
         <aside className="sidebar w-12 h-full bg-dark-deep border-solid border-r-[0.0625rem] border-dark-slate">
@@ -64,7 +70,7 @@ export default function Sidebar() {
                         </div>
                     </li>
                     <li className="menu-item !absolute bottom-0">
-                        <div className="w-[1.125rem] h-[1.125rem]" onClick={()=>navigation("/login")}>
+                        <div className="w-[1.125rem] h-[1.125rem]" onClick={handleLogout}>
                             <img className="w-full h-full" src="/images/icons/Group 18.png" alt="Menu Icon" />
                         </div>
                     </li>
