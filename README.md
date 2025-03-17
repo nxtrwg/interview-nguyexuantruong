@@ -7,7 +7,7 @@
 
 ## 2. Clone the Project to Local
 ```bash
-https://github.com/nxtrwg/interview-nguyexuantruong.git
+git clone https://github.com/nxtrwg/interview-nguyexuantruong.git
 ```
 
 ## 3. Navigate to the Project Folder
