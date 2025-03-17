@@ -5,6 +5,13 @@
 - Node.js & npm → <a href="https://nodejs.org/en/download">Download Node.js here</a>
 - Vite (optional) → <a href="https://vite.dev/guide/">Can be installed after pulling the project</a>
 
+<strong>Note*:</strong>You can refer to my parameters
+|Name|Version|
+|-|-|
+|Git|2.48.x|
+|Nodejs|22.x|
+|Reactjs|19.x|
+
 ## 2. Clone the Project to Local
 ```bash
 git clone https://github.com/nxtrwg/interview-nguyexuantruong.git
