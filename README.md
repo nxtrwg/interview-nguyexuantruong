@@ -10,7 +10,7 @@
 |-|-|
 |Git|2.48.x|
 |Nodejs|22.x|
-|Reactjs|19.x|
+|Vite|6.x|
 
 ## 2. Clone the Project to Local
 ```bash
