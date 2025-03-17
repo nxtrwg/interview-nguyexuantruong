@@ -19,7 +19,7 @@ git clone https://github.com/nxtrwg/interview-nguyexuantruong.git
 
 ## 3. Navigate to the Project Folder
 ```bash
-cd interview
+cd interview-nguyexuantruong
 ```
 
 ## 4. Install Dependencies
