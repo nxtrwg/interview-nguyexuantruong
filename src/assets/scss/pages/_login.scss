@@ -1,0 +1,141 @@
+.circle {
+    position: absolute;
+    width: 61.125rem;
+    height: 61.125rem;
+    transform: rotate(45deg);
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        border-radius: 50rem;
+        transform: skew(0deg, 15deg);
+    }
+
+    &-pink {
+        z-index: 1;
+        top: -30%;
+        right: 0;
+
+        &::before {
+            background-color: #FC165B;
+
+        }
+    }
+
+    &-cyan {
+        right: 10%;
+        z-index: 0;
+        top: -20%;
+
+        &::before {
+            background-color: #16FCD2;
+        }
+    }
+
+    &-orange {
+        right: 45rem;
+        z-index: 0;
+
+        &::before {
+            bottom: 0%;
+            left: 0;
+            background-color: #FCA016;
+        }
+    }
+}
+
+.background {
+    position: absolute;
+    overflow: hidden;
+
+    &::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background-color: #0B0B22e6;
+        backdrop-filter: blur(50px);
+        z-index: 2;
+    }
+}
+
+.bubbles {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+
+    .bubble {
+        position: absolute;
+
+        &-green {
+            width: 3.4375rem;
+            aspect-ratio: 1;
+            background: linear-gradient(#66FFA3, #009C3E);
+            border-radius: 50rem;
+            top: 10rem;
+            left: calc(50% + 15rem);
+            filter: blur(5px);
+            animation: bubble_green_animation 2s linear 0s infinite alternate;
+        }
+
+        &-pink {
+            width: 2.875rem;
+            aspect-ratio: 1;
+            background: linear-gradient(#FF81A6, #FC165B);
+            border-radius: 50rem;
+            top: 40%;
+            left: calc(50% - 40rem);
+            filter: blur(5px);
+            animation: bubble_pink_animation 3s linear 0s infinite alternate;
+        }
+
+        &-blue {
+            width: 1.1875rem;
+            aspect-ratio: 1;
+            background: linear-gradient(#6016FC, #6016FC);
+            border-radius: 50rem;
+            top: 75%;
+            left: 80%;
+            filter: blur(5px);
+            animation: bubble_blue_animation 4s linear 0s infinite alternate;
+        }
+    }
+}
+
+@keyframes bubble_green_animation {
+    0% {
+        top: 10rem;
+        left: calc(50% + 15rem);
+    }
+
+    100% {
+        top: 13rem;
+        left: calc(50% + 18rem);
+    }
+}
+
+@keyframes bubble_pink_animation {
+    0% {
+        top: 40%;
+        left: calc(50% - 40rem);
+    }
+
+    100% {
+        top: 35%;
+        left: calc(50% - 45rem);
+    }
+}
+
+@keyframes bubble_blue_animation {
+    0% {
+        top: 75%;
+        left: 80%;
+    }
+
+    100% {
+        top: 77%;
+        left: 82%;
+    }
+}

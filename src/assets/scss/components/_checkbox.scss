@@ -1,0 +1,30 @@
+.checkbox {
+    display: none;
+
+    &:checked + .checkmark {
+        border-color: #DD5313;
+
+        &::before {
+            content: "";
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            width: 70%;
+            aspect-ratio: 1;
+            background-color: #DD5313;
+            border-radius: 0.25rem;
+        }
+    }
+}
+
+.checkmark {
+    display: inline-block;
+    width: 0.75rem;
+    aspect-ratio: 1;
+    border-radius: 0.25rem;
+    border-width: 0.0625rem;
+    border-color: #fff;
+    background-color: transparent;
+    position: relative;
+}

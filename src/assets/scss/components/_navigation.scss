@@ -1,0 +1,26 @@
+.items-per-page {
+    display: none;
+    background-color: #09091A;
+
+    &-wrapper {
+        &:hover .items-per-page {
+            display: block;
+        }
+    }
+}
+
+.row-per-page {
+
+    &+span {
+        display: inline-block;
+        color: #fff;
+        padding: 0.5rem;
+        font-size: 0.75rem;
+        cursor: pointer;
+        width: 100%;
+
+        &:hover {
+            background-color: #17202E;
+        }
+    }
+}
