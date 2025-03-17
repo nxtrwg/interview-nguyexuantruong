@@ -12,7 +12,7 @@ https://github.com/nxtrwg/interview-nguyexuantruong.git
 
 ## 3. Navigate to the Project Folder
 ```bash
-cd repository-name
+cd interview
 ```
 
 ## 4. Install Dependencies
